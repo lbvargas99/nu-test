@@ -1,0 +1,16 @@
+node_modules
+dist
+coverage
+.git
+.gitignore
+*.log
+*.md
+test-input.txt
+tests
+vitest.config.ts
+.eslintrc.json
+.prettierrc
+PRD.md
+PLANO_IMPLEMENTACAO.md
+overview.md
+spec-ptbr.pdf
