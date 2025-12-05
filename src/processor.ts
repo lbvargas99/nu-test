@@ -11,8 +11,9 @@ export function processOperations(operations: Operation[]): TaxResult[] {
 
     if (operation.operation === 'buy') {
       result = processBuy(state, operation);
+    } else {
+      result = processSell(state, operation);
     }
-    result = processSell(state, operation);
 
     results.push(result);
   }
