@@ -104,17 +104,54 @@ echo '[{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{"operation":"s
 
 ## Testes
 
+### Executar Todos os Testes
+
 ```bash
 # Executar todos os testes
 npm test
 
 # Executar com cobertura
 npm run test:coverage
+
+# Executar em modo watch (re-executa ao modificar código)
+npm run test:watch
+```
+
+### Executar Testes por Tipo
+
+```bash
+# Apenas testes unitários (25 testes)
+npm test tests/unit
+
+# Apenas testes de integração (9 testes)
+npm test tests/integration
+
+# Apenas testes E2E (6 testes)
+npm test tests/e2e
+```
+
+### Executar Arquivos Específicos
+
+```bash
+# Testar apenas o tax-calculator
+npm test tests/unit/tax-calculator.test.ts
+
+# Testar apenas as utils
+npm test tests/unit/utils.test.ts
+
+# Testar casos da especificação
+npm test tests/integration/cases.test.ts
+
+# Testar o CLI completo
+npm test tests/e2e/cli.test.ts
 ```
 
 **Cobertura de Testes:**
-- 40 testes no total (unitários + integração + e2e)
-- 100% de cobertura de código
+- **40 testes no total** divididos em:
+  - **25 testes unitários** (utils + tax-calculator)
+  - **9 testes de integração** (casos da especificação)
+  - **6 testes E2E** (CLI completo)
+- **100% de cobertura de código** (statements, branches, functions, lines)
 - Todos os 9 casos da especificação validados
 
 ---
